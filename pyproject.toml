@@ -1,14 +1,15 @@
 [tool.poetry]
 name = "checkio"
 version = "0.1.0"
-description = ""
+description = "Poetry project"
 authors = ["Daniel Wolff <daniel.wolff.etu@univ-lille.fr>"]
-readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.12"
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+license = "MIT"  # or another license if applicable
+readme = "README.md"  # If you have a README file
+homepage = "https://your-project-homepage.com"  # If applicable
+repository = "https://github.com/WWWolff/Poetry"  # If applicable
+keywords = ["keyword1", "keyword2"]  # Optional keywords
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
