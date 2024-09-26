@@ -7,8 +7,11 @@ def addition(a,b):
 def subtraction(a,b):
     return a - b
 
+def multiplication(a,b):
+    return a * b
 
-#ex2
+def division(a,b):
+    return a / b
 
 def checkio(data: str) -> bool:
     components = data.split()
