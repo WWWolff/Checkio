@@ -1,0 +1,43 @@
+# .github/workflows/ci.yml
+name: CI
+
+on:
+  push:
+    branches:
+      - main  # Change to your default branch
+  pull_request:
+    branches:
+      - main  # Change to your default branch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'  # Change to your required Python version
+
+    - name: Install Poetry
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 -
+        echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+    - name: Install dependencies
+      run: poetry install
+
+    - name: Run tests and generate coverage report
+      run: |
+        poetry run coverage run -m pytest
+        poetry run coverage report -m
+        poetry run coverage html  # Optional: generate HTML report
+
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v2
+      with:
+        name: coverage-report
+        path: htmlcov/  # Adjust if needed
