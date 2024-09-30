@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "my-awesome-project"  # Change to your project's name
+version = "0.2.0"  # Update version number
+description = "An awesome project that does great things."  # Update description
+authors = ["Daniel Wolff <daniel.wolff.etu@univ-lille.fr>", "New Contributor <new.contributor@example.com>"]  # Add contributors
+license = "MIT"  # Ensure the license is correct
+readme = "README.md"  # Ensure the README file exists
+homepage = "https://my-awesome-project-homepage.com"  # Update homepage if needed
+repository = "https://github.com/WWWolff/my-awesome-project"  # Update repository URL
+keywords = ["awesome", "project", "example"]  # Update keywords
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",  # Example addition for project status
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9, <3.13"  # Update this to reflect the correct version
+pylint = "^3.3.1"
+Sphinx = { version = "4.2.0", optional = true }
+sphinx-rtd-theme = { version = "1.0.0", optional = true }
+sphinxcontrib-napoleon = { version = "0.7", optional = true }
+
+[tool.poetry.extras]
+docs = ["Sphinx", "sphinx-rtd-theme", "sphinxcontrib-napoleon"]

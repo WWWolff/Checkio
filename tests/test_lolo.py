@@ -1,5 +1,7 @@
 import pytest
-from excersises import addition
+
+from excersises import addition, subtraction, multiplication, division
+
 
 def test_addition():
     assert addition(2, 3) == 5

@@ -1,11 +1,18 @@
 # write your code here
-a=int(2); b=int(5)
+a=int(2); b=int(3)
 
 def addition(a,b):
     return a + b
 
 def subtraction(a,b):
     return a - b
+
+def multiplication(a,b):
+     return a * b
+
+def division(a,b):
+    return a / b
+
 
 
 #ex2
